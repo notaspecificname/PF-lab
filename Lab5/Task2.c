@@ -34,6 +34,7 @@ int main(){     //Start main function
         printf(ne);
     }
 
+    return 0;
 
 
 }
