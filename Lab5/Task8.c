@@ -39,7 +39,6 @@ int main(){
     
     // if(permission & (1 << 1) && permission & (1 << 3))
     //     printf("User has both training and deployment permission");
-    // Stuff
 
 
 }
