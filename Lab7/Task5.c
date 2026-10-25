@@ -21,7 +21,7 @@ int main(){
     }
 
     for(int i=0; i<3; i++){     //Takes the whole sentence
-        while(compare != strlen(sentences[i])){     //Takes each letter of the sentence
+        while(compare != strlen(sentences[i])){     //For taking each letter of the sentence. will run until
             for(int j=0; j<10;j++){  //Takes the vowels string for comapring
                 
                 if(sentences[i][compare] == vowels[j]){
