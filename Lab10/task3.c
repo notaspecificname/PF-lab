@@ -1,23 +1,26 @@
 #include <stdio.h>
 #include <string.h>
-int main(void)
-{
+
+int main(){
     char mail[100];
     char domain[100];
-    char *at;
-    printf("input your email address: ");
+
+    printf("Enter ur email address: ");
     scanf("%99[^\n]", mail);
-    at = strchr(mail, '@');      
-    if (at == NULL)
-    {
-        printf("Invalid email format\n");
-    }
-    else
-    {
-        printf("@ exists at index: %d\n",(int)(at-mail));
-        strcpy(domain, at + 1);  
-        printf("Domain: %s", domain);
+
+    char *at ;
+    at = strchr(mail, '@');
+
+
+    if(at == NULL){
+        printf("Invalid Email Format");
+        return 0;
     }
 
-    return 0;
+    printf("@ exists on index: %d",(int)(at - mail));
+    strcpy(domain, at+1);
+    printf("Domain: %s",domain);
+
+
+
 }
