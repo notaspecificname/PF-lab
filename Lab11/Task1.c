@@ -6,8 +6,8 @@ int main(){
     int code;
     printf("Enter security Code");
     scanf("%d",&code);
-    int sum = 0;
-    sum = sum + calculateChecksum(code);
+    
+    int sum = calculateChecksum(code);
 
     printf("Digital root found: %d", sum);
 }
@@ -16,11 +16,10 @@ int calculateChecksum(int transactionID){
     if(transactionID < 10){
         return transactionID;
     }
-    int sum = 0;
     int temp = transactionID;
+    int individualNum = temp % 10;
+    temp = temp / 10;
 
-    sum = sum + temp % 10;
-    return (transactionID % 10);
-    calculateChecksum(transactionID);
+    return individualNum + calculateChecksum(temp);
     
 }
